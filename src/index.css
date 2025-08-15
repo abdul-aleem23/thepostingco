@@ -177,24 +177,24 @@ html {
   display: block;
 }
 
-/* Extra small screens - balanced scaling */
+/* Extra small screens - larger but safe scaling */
 @media (max-width: 480px) {
   .ascii-logo {
-    transform: scale(0.85);
+    transform: scale(0.95);
     transform-origin: center;
   }
 }
 
 @media (max-width: 360px) {
   .ascii-logo {
-    transform: scale(0.75);
+    transform: scale(0.85);
     transform-origin: center;
   }
 }
 
 @media (max-width: 320px) {
   .ascii-logo {
-    transform: scale(0.65);
+    transform: scale(0.75);
     transform-origin: center;
   }
 }
