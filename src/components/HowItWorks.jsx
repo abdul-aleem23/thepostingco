@@ -67,7 +67,7 @@ function HowItWorks() {
                   </h3>
                   <p 
                     className="text-gray-300 font-pixel leading-relaxed"
-                    style={{ fontSize: 'clamp(0.9rem, 3vw, 1.1rem)' }}
+                    style={{ fontSize: 'clamp(1rem, 3.5vw, 1.25rem)' }}
                   >
                     {step.description}
                   </p>
@@ -119,7 +119,7 @@ function HowItWorks() {
                 </h3>
                 <p 
                   className="text-gray-300 font-pixel leading-relaxed"
-                  style={{ fontSize: '1.1rem' }}
+                  style={{ fontSize: '1.25rem' }}
                 >
                   {step.description}
                 </p>
