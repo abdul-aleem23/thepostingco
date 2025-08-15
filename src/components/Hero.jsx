@@ -9,7 +9,7 @@ function Hero() {
     <section id="home" className="min-h-[100dvh] flex items-center justify-center relative overflow-hidden scanlines py-8 sm:py-12">
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-slate-800 to-black spray-paint"></div>
       
-      <div className="relative z-10 text-center px-4 sm:px-6 max-w-5xl mx-auto w-full flex flex-col justify-center min-h-0">
+      <div className="relative z-10 text-center px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full flex flex-col justify-center min-h-0">
         {/* ASCII Logo */}
         <motion.div 
           className="mb-2 sm:mb-4 md:mb-6"
@@ -59,12 +59,12 @@ function Hero() {
         
         {/* CTA Button */}
         <motion.button 
-          className="text-black font-cyber font-bold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg min-h-[44px] px-6 sm:px-8 md:px-10"
+          className="text-black font-cyber font-bold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg min-h-[44px] px-6 sm:px-8 md:px-8 mx-auto w-fit"
           style={{
             backgroundColor: '#F0CA00',
             boxShadow: '0 4px 15px rgba(240, 202, 0, 0.3)',
             fontSize: 'clamp(1rem, 4vw, 1.25rem)',
-            padding: 'clamp(12px, 3vw, 16px) clamp(24px, 6vw, 40px)'
+            padding: 'clamp(12px, 3vw, 16px) clamp(24px, 4vw, 32px)'
           }}
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
