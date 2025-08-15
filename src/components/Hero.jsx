@@ -6,7 +6,7 @@ function Hero() {
   const { t } = useLanguage()
 
   return (
-    <section id="home" className="min-h-[100dvh] flex items-center justify-center relative overflow-hidden scanlines py-8 sm:py-12">
+    <section id="home" className="min-h-[100dvh] flex items-center justify-center relative overflow-hidden scanlines py-8 sm:py-12 md:pt-20 lg:pt-28 xl:pt-32 max-sm:landscape:pt-16">
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-slate-800 to-black spray-paint"></div>
       
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto w-full flex flex-col justify-center min-h-0 overflow-hidden">

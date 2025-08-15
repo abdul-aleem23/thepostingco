@@ -6,7 +6,7 @@ function ContactForm() {
   const businessTypes = t('contact.form.businessTypes')
 
   return (
-    <section id="contact" className="py-20 px-4">
+    <section id="contact" className="py-20 px-4 max-sm:landscape:pt-16">
       <div className="max-w-xl mx-auto">
         <motion.h2 
           className="text-4xl md:text-5xl font-cyber font-bold text-center mb-12"

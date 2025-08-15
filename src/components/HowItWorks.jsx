@@ -8,7 +8,7 @@ function HowItWorks() {
   const pixelIcons = ['📁', '⚡', '🚴']
 
   return (
-    <section id="how-it-works" className="py-20 px-4 relative">
+    <section id="how-it-works" className="py-20 px-4 relative max-sm:landscape:pt-16">
       <div className="max-w-5xl mx-auto">
         <motion.h2 
           className="font-cyber font-bold text-center mb-16"

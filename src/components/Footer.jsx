@@ -5,7 +5,7 @@ function Footer() {
   const { t } = useLanguage()
 
   return (
-    <footer className="bg-white/10 backdrop-blur-md border-t-2 py-8 md:py-12 px-4" style={{ borderColor: '#F0CA00' }}>
+    <footer className="bg-white/10 backdrop-blur-md border-t-2 py-8 md:py-12 px-4 max-sm:landscape:pt-12" style={{ borderColor: '#F0CA00' }}>
       <div className="max-w-6xl mx-auto">
         <div className="text-center">
           <motion.div 

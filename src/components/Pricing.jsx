@@ -5,7 +5,7 @@ function Pricing() {
   const { t } = useLanguage()
 
   return (
-    <section id="pricing" className="py-20 px-4">
+    <section id="pricing" className="py-20 px-4 max-sm:landscape:pt-16">
       <div className="max-w-3xl mx-auto">
         <motion.div 
           className="bg-white/10 backdrop-blur-md border-2 rounded-2xl p-6 md:p-12 text-center relative overflow-hidden"
