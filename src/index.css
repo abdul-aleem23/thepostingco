@@ -151,6 +151,21 @@ body {
   font-weight: 700;
 }
 
+/* ASCII Logo Responsive Handling */
+.ascii-logo {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.ascii-logo pre {
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: pre;
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;

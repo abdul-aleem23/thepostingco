@@ -9,7 +9,7 @@ function Hero() {
     <section id="home" className="min-h-[100dvh] flex items-center justify-center relative overflow-hidden scanlines py-8 sm:py-12">
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-slate-800 to-black spray-paint"></div>
       
-      <div className="relative z-10 text-center px-6 sm:px-8 lg:px-12 max-w-7xl mx-auto w-full flex flex-col justify-center min-h-0">
+      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto w-full flex flex-col justify-center min-h-0 overflow-hidden">
         {/* ASCII Logo */}
         <motion.div 
           className="mb-2 sm:mb-4 md:mb-6"
