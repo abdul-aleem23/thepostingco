@@ -50,7 +50,7 @@ function Navbar() {
               }}
               whileTap={{ scale: 0.95 }}
             >
-              [{language.toUpperCase()}]
+              {language === 'en' ? 'DE' : 'EN'}
             </motion.button>
           </div>
           
@@ -70,7 +70,7 @@ function Navbar() {
               }}
               whileTap={{ scale: 0.95 }}
             >
-              [{language.toUpperCase()}]
+              {language === 'en' ? 'DE' : 'EN'}
             </motion.button>
             <motion.button
               className="flex flex-col justify-center items-center w-8 h-8 space-y-1"
