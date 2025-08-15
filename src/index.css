@@ -177,28 +177,28 @@ html {
   display: block;
 }
 
-/* Extra small screens - conservative scaling */
+/* Extra small screens - fine-tuned to fit completely */
 @media (max-width: 480px) {
   .ascii-logo {
-    transform: scale(0.8);
-    transform-origin: center;
-    font-size: 0.5rem !important;
-  }
-}
-
-@media (max-width: 360px) {
-  .ascii-logo {
-    transform: scale(0.7);
+    transform: scale(0.75);
     transform-origin: center;
     font-size: 0.45rem !important;
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 360px) {
   .ascii-logo {
-    transform: scale(0.6);
+    transform: scale(0.65);
     transform-origin: center;
     font-size: 0.4rem !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .ascii-logo {
+    transform: scale(0.55);
+    transform-origin: center;
+    font-size: 0.35rem !important;
   }
 }
 
