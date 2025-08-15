@@ -136,10 +136,19 @@ function Navbar() {
 }
 
 function NavLink({ href, children }) {
+  const handleClick = (e) => {
+    e.preventDefault()
+    const target = document.querySelector(href)
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <motion.a 
       href={href} 
-      className="text-gray-300 transition-colors font-pixel relative min-h-[44px] flex items-center"
+      onClick={handleClick}
+      className="text-gray-300 transition-colors font-pixel relative min-h-[44px] flex items-center cursor-pointer"
       style={{ fontSize: 'clamp(0.875rem, 3vw, 1.125rem)' }}
       whileHover={{ 
         scale: 1.05,
@@ -154,11 +163,23 @@ function NavLink({ href, children }) {
 }
 
 function MobileNavLink({ href, children, onClick }) {
+  const handleClick = (e) => {
+    e.preventDefault()
+    onClick()
+    // Smooth scroll to target after menu closes
+    setTimeout(() => {
+      const target = document.querySelector(href)
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' })
+      }
+    }, 200)
+  }
+
   return (
     <motion.a 
       href={href}
-      onClick={onClick}
-      className="block px-4 py-3 text-gray-300 font-pixel text-lg min-h-[44px] flex items-center"
+      onClick={handleClick}
+      className="block px-4 py-3 text-gray-300 font-pixel text-lg min-h-[44px] flex items-center cursor-pointer"
       whileHover={{ 
         color: '#F0CA00',
         x: 10,
