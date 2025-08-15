@@ -85,7 +85,7 @@ export const translations = {
     },
     footer: {
       tagline: "Your Business, Everywhere in Berlin.",
-      rights: "All rights reserved.",
+      rights: "All rights not reserved.",
       berlin: "Proudly serving Berlin businesses."
     }
   },
@@ -175,7 +175,7 @@ export const translations = {
     },
     footer: {
       tagline: "Ihr Geschäft, überall in Berlin.",
-      rights: "Alle Rechte vorbehalten.",
+      rights: "Keine Rechte vorbehalten.",
       berlin: "Stolz im Dienst der Berliner Unternehmen."
     }
   }
