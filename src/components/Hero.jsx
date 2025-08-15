@@ -6,13 +6,13 @@ function Hero() {
   const { t } = useLanguage()
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden scanlines">
+    <section id="home" className="min-h-[100dvh] flex items-center justify-center relative overflow-hidden scanlines py-8 sm:py-12">
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-slate-800 to-black spray-paint"></div>
       
-      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
+      <div className="relative z-10 text-center px-4 sm:px-6 max-w-5xl mx-auto w-full flex flex-col justify-center min-h-0">
         {/* ASCII Logo */}
         <motion.div 
-          className="mb-4 sm:mb-6 md:mb-8"
+          className="mb-2 sm:mb-4 md:mb-6"
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -22,7 +22,7 @@ function Hero() {
         
         {/* Main Tagline */}
         <motion.h1 
-          className="font-cyber font-bold mb-4 sm:mb-6"
+          className="font-cyber font-bold mb-2 sm:mb-4 md:mb-6"
           style={{
             fontSize: 'clamp(1.5rem, 6vw, 5rem)',
             lineHeight: '1.1'
@@ -45,7 +45,7 @@ function Hero() {
         
         {/* Subtitle */}
         <motion.p 
-          className="mb-6 sm:mb-8 max-w-4xl mx-auto font-pixel leading-relaxed px-4"
+          className="mb-4 sm:mb-6 md:mb-8 max-w-4xl mx-auto font-pixel leading-relaxed"
           style={{ 
             color: '#D1D5DB',
             fontSize: 'clamp(0.875rem, 3vw, 1.25rem)'

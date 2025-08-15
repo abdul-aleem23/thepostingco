@@ -19,7 +19,7 @@ function ASCIILogo() {
     <motion.div 
       className="ascii-logo font-mono leading-none overflow-hidden"
       style={{
-        fontSize: 'clamp(0.5rem, 2vw, 1.2rem)'
+        fontSize: 'clamp(0.35rem, 1.8vw, 1.2rem)'
       }}
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
