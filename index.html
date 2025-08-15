@@ -8,6 +8,24 @@
     <title>The Posting Co.</title>
   </head>
   <body>
+    <!-- Hidden form for Netlify detection -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="business-name" />
+      <input type="text" name="contact-name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <select name="business-type">
+        <option value="restaurant">Restaurant</option>
+        <option value="retail">Retail</option>
+        <option value="services">Services</option>
+        <option value="fitness">Fitness</option>
+        <option value="entertainment">Entertainment</option>
+        <option value="other">Other</option>
+      </select>
+      <input type="text" name="target-areas" />
+      <textarea name="notes"></textarea>
+    </form>
+    
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

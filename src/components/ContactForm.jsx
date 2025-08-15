@@ -13,6 +13,7 @@ function ContactForm() {
     
     try {
       const formData = new FormData(e.target)
+      
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -22,12 +23,13 @@ function ContactForm() {
       if (response.ok) {
         setFormStatus('success')
         e.target.reset()
-        setTimeout(() => setFormStatus('idle'), 5000) // Reset after 5 seconds
+        setTimeout(() => setFormStatus('idle'), 5000)
       } else {
         setFormStatus('error')
         setTimeout(() => setFormStatus('idle'), 5000)
       }
     } catch (error) {
+      console.error('Form submission error:', error)
       setFormStatus('error')
       setTimeout(() => setFormStatus('idle'), 5000)
     }
@@ -69,6 +71,7 @@ function ContactForm() {
         >
           <form className="space-y-6" netlify="true" name="contact" onSubmit={handleSubmit}>
           <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="bot-field" />
           
           <div className="grid md:grid-cols-2 gap-6">
             <div>

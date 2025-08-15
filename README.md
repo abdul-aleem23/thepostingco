@@ -4,7 +4,7 @@ Street art-inspired marketing website for flyer and sticker posting services in 
 
 ## Overview
 
-Hybrid design combining ASCII art, street art aesthetics, and retro gaming elements. One flat rate: **€99 for all businesses in Berlin**.
+Hybrid design combining ASCII art, street art aesthetics, and retro gaming elements.
 
 ## Tech Stack
 
