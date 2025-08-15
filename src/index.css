@@ -16,6 +16,13 @@ body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   background-color: var(--berlin-black);
   color: var(--berlin-white);
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+html {
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 /* Subtle Glitch Effect - Only on Hover */
@@ -154,16 +161,42 @@ body {
 /* ASCII Logo Responsive Handling */
 .ascii-logo {
   width: 100%;
-  max-width: 100%;
+  max-width: 100vw;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .ascii-logo pre {
-  width: fit-content;
-  max-width: 100%;
+  width: max-content;
+  max-width: 95vw;
   margin: 0 auto;
   overflow: hidden;
   white-space: pre;
+  display: block;
+}
+
+/* Extra small screens - balanced scaling */
+@media (max-width: 480px) {
+  .ascii-logo {
+    transform: scale(0.85);
+    transform-origin: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .ascii-logo {
+    transform: scale(0.75);
+    transform-origin: center;
+  }
+}
+
+@media (max-width: 320px) {
+  .ascii-logo {
+    transform: scale(0.65);
+    transform-origin: center;
+  }
 }
 
 /* Smooth scrolling */
