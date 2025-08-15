@@ -177,28 +177,28 @@ html {
   display: block;
 }
 
-/* Extra small screens - fine-tuned to fit completely */
+/* Extra small screens - extra small to fit G completely */
 @media (max-width: 480px) {
   .ascii-logo {
-    transform: scale(0.75);
+    transform: scale(0.65);
     transform-origin: center;
-    font-size: 0.45rem !important;
+    font-size: 0.35rem !important;
   }
 }
 
 @media (max-width: 360px) {
   .ascii-logo {
-    transform: scale(0.65);
+    transform: scale(0.55);
     transform-origin: center;
-    font-size: 0.4rem !important;
+    font-size: 0.3rem !important;
   }
 }
 
 @media (max-width: 320px) {
   .ascii-logo {
-    transform: scale(0.55);
+    transform: scale(0.45);
     transform-origin: center;
-    font-size: 0.35rem !important;
+    font-size: 0.25rem !important;
   }
 }
 
