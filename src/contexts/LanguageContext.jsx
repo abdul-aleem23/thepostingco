@@ -14,7 +14,7 @@ export const useLanguage = () => {
 export const LanguageProvider = ({ children }) => {
   const [language, setLanguage] = useState(() => {
     const saved = localStorage.getItem('language')
-    return saved || 'de' // Default to German for Berlin
+    return saved || 'en' // Default to English
   })
 
   useEffect(() => {

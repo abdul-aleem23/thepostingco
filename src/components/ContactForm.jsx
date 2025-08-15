@@ -1,9 +1,37 @@
 import { useLanguage } from '../contexts/LanguageContext'
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 
 function ContactForm() {
   const { t } = useLanguage()
   const businessTypes = t('contact.form.businessTypes')
+  const [formStatus, setFormStatus] = useState('idle') // 'idle', 'submitting', 'success', 'error'
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setFormStatus('submitting')
+    
+    try {
+      const formData = new FormData(e.target)
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
+      })
+      
+      if (response.ok) {
+        setFormStatus('success')
+        e.target.reset()
+        setTimeout(() => setFormStatus('idle'), 5000) // Reset after 5 seconds
+      } else {
+        setFormStatus('error')
+        setTimeout(() => setFormStatus('idle'), 5000)
+      }
+    } catch (error) {
+      setFormStatus('error')
+      setTimeout(() => setFormStatus('idle'), 5000)
+    }
+  }
 
   return (
     <section id="contact" className="py-20 px-4 max-sm:landscape:pt-16">
@@ -39,7 +67,7 @@ function ContactForm() {
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
         >
-          <form className="space-y-6" netlify="true" name="contact">
+          <form className="space-y-6" netlify="true" name="contact" onSubmit={handleSubmit}>
           <input type="hidden" name="form-name" value="contact" />
           
           <div className="grid md:grid-cols-2 gap-6">
@@ -159,33 +187,61 @@ function ContactForm() {
           
           <motion.button 
             type="submit"
-            className="w-full text-black font-cyber font-bold rounded-lg transition-all duration-300 transform hover:scale-105 min-h-[44px]"
+            disabled={formStatus === 'submitting'}
+            className="w-full text-black font-cyber font-bold rounded-lg transition-all duration-300 transform hover:scale-105 min-h-[44px] disabled:opacity-50 disabled:cursor-not-allowed"
             style={{
-              backgroundColor: '#F0CA00',
+              backgroundColor: formStatus === 'submitting' ? '#B8860B' : '#F0CA00',
               boxShadow: '0 4px 15px rgba(240, 202, 0, 0.3)',
               fontSize: 'clamp(1rem, 4vw, 1.25rem)',
               padding: 'clamp(12px, 3vw, 16px)'
             }}
             whileHover={{ 
-              backgroundColor: '#D4B000',
+              backgroundColor: formStatus === 'submitting' ? '#B8860B' : '#D4B000',
               boxShadow: "0 0 25px rgba(240, 202, 0, 0.8)",
-              y: -2
+              y: formStatus === 'submitting' ? 0 : -2
             }}
-            whileTap={{ scale: 0.98 }}
+            whileTap={{ scale: formStatus === 'submitting' ? 1 : 0.98 }}
           >
-            &gt; {t('contact.form.submit')}
+            &gt; {formStatus === 'submitting' ? 'Sending...' : t('contact.form.submit')}
           </motion.button>
         </form>
         
-        <motion.p 
-          className="text-center text-gray-400 mt-6 font-pixel"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.4, delay: 0.4 }}
-          viewport={{ once: true }}
-        >
-          Got it. We'll be in touch within 24 hours.
-        </motion.p>
+        {/* Status Messages */}
+        {formStatus === 'success' && (
+          <motion.div 
+            className="text-center mt-6 p-4 rounded-lg bg-green-500/20 border border-green-500"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <p className="text-green-400 font-pixel font-bold">✓ Message sent successfully!</p>
+            <p className="text-green-300 font-pixel text-sm mt-1">We'll be in touch within 24 hours.</p>
+          </motion.div>
+        )}
+        
+        {formStatus === 'error' && (
+          <motion.div 
+            className="text-center mt-6 p-4 rounded-lg bg-red-500/20 border border-red-500"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <p className="text-red-400 font-pixel font-bold">✗ Failed to send message</p>
+            <p className="text-red-300 font-pixel text-sm mt-1">Please try again or email us directly.</p>
+          </motion.div>
+        )}
+        
+        {formStatus === 'idle' && (
+          <motion.p 
+            className="text-center text-gray-400 mt-6 font-pixel"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.4, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            Ready to spread your message across Berlin?
+          </motion.p>
+        )}
         </motion.div>
       </div>
     </section>

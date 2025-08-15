@@ -1,12 +1,40 @@
-# React + Vite
+# ThePostingCo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Street art-inspired marketing website for flyer and sticker posting services in Berlin.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Hybrid design combining ASCII art, street art aesthetics, and retro gaming elements. One flat rate: **€99 for all businesses in Berlin**.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: React + Vite
+- **Styling**: TailwindCSS v4
+- **Animations**: Framer Motion
+- **Forms**: Netlify Forms
+- **Deployment**: Netlify
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+## Features
+
+- Bilingual (German/English)
+- Mobile-responsive design
+- Berlin-focused delivery network
+- Contact form with Netlify integration
+- Glass morphism UI with Berlin U-Bahn color scheme
+
+## Deployment
+
+Deployed on Netlify with automatic form handling. Contact submissions are captured in the Netlify dashboard.
