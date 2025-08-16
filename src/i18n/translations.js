@@ -77,7 +77,14 @@ export const translations = {
           other: "Other"
         },
         targetAreas: "Target Berlin Areas",
-        targetAreasPlaceholder: "e.g., Mitte, Kreuzberg, Prenzlauer Berg...",
+        berlinDistricts: {
+          mitte: "Mitte",
+          kreuzberg: "Kreuzberg",
+          prenzlauerBerg: "Prenzlauer Berg",
+          friedrichshain: "Friedrichshain",
+          charlottenburg: "Charlottenburg",
+          neukolln: "Neukölln"
+        },
         notes: "Additional Notes",
         notesPlaceholder: "Tell us about your business and any specific requirements...",
         submit: "Start Posting Campaign"
@@ -167,7 +174,14 @@ export const translations = {
           other: "Sonstiges"
         },
         targetAreas: "Ziel-Berliner Gebiete",
-        targetAreasPlaceholder: "z.B. Mitte, Kreuzberg, Prenzlauer Berg...",
+        berlinDistricts: {
+          mitte: "Mitte",
+          kreuzberg: "Kreuzberg",
+          prenzlauerBerg: "Prenzlauer Berg",
+          friedrichshain: "Friedrichshain",
+          charlottenburg: "Charlottenburg",
+          neukolln: "Neukölln"
+        },
         notes: "Zusätzliche Notizen",
         notesPlaceholder: "Erzählen Sie uns von Ihrem Geschäft und besonderen Anforderungen...",
         submit: "Plakatierungs-Kampagne starten"

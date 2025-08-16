@@ -5,6 +5,7 @@ import { useState } from 'react'
 function ContactForm() {
   const { t } = useLanguage()
   const businessTypes = t('contact.form.businessTypes')
+  const berlinDistricts = t('contact.form.berlinDistricts')
   const [formStatus, setFormStatus] = useState('idle') // 'idle', 'submitting', 'success', 'error'
 
   const handleSubmit = async (e) => {
@@ -169,15 +170,24 @@ The ThePostingCo Team" />
             <label className="block font-pixel font-semibold mb-2" style={{ color: '#F0CA00' }}>
               &gt; {t('contact.form.targetAreas')}
             </label>
-            <input 
-              type="text" 
+            <select 
               name="target-areas"
-              placeholder={t('contact.form.targetAreasPlaceholder')}
-              className="w-full bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none transition-all"
+              className="w-full bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none transition-all"
+              style={{
+                color: 'white'
+              }}
               onFocus={(e) => e.target.style.borderColor = '#F0CA00'}
               onBlur={(e) => e.target.style.borderColor = 'rgba(255,255,255,0.2)'}
               required
-            />
+            >
+              <option value="" style={{ backgroundColor: '#1a1a1a', color: 'white' }}>Select target district</option>
+              <option value="mitte" style={{ backgroundColor: '#1a1a1a', color: 'white' }}>{berlinDistricts.mitte}</option>
+              <option value="kreuzberg" style={{ backgroundColor: '#1a1a1a', color: 'white' }}>{berlinDistricts.kreuzberg}</option>
+              <option value="prenzlauer-berg" style={{ backgroundColor: '#1a1a1a', color: 'white' }}>{berlinDistricts.prenzlauerBerg}</option>
+              <option value="friedrichshain" style={{ backgroundColor: '#1a1a1a', color: 'white' }}>{berlinDistricts.friedrichshain}</option>
+              <option value="charlottenburg" style={{ backgroundColor: '#1a1a1a', color: 'white' }}>{berlinDistricts.charlottenburg}</option>
+              <option value="neukolln" style={{ backgroundColor: '#1a1a1a', color: 'white' }}>{berlinDistricts.neukolln}</option>
+            </select>
           </div>
           
           <div>
