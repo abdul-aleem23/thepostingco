@@ -52,7 +52,7 @@ export const translations = {
       }
     },
     pricing: {
-      price: "€150",
+      price: "€200",
       title: "– Flat Rate.",
       subtitle: "Every Time.",
       description: "Small café? Big restaurant? Local shop in Berlin? Same price. We don't play favorites.",
@@ -142,7 +142,7 @@ export const translations = {
       }
     },
     pricing: {
-      price: "150 €",
+      price: "200 €",
       title: "– Festpreis.",
       subtitle: "Jedes Mal.",
       description: "Kleines Café? Großes Restaurant? Lokaler Laden in Berlin? Gleicher Preis. Wir machen keine Unterschiede.",

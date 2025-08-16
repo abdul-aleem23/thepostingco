@@ -72,6 +72,12 @@ function ContactForm() {
           <form className="space-y-6" netlify="true" name="contact" onSubmit={handleSubmit}>
           <input type="hidden" name="form-name" value="contact" />
           <input type="hidden" name="bot-field" />
+          <input type="hidden" name="autoReply" value="Thank you for your interest in ThePostingCo! We've received your request and will be in touch within 24 hours to discuss spreading your message across Berlin. 
+
+Your flat rate: €200 for comprehensive Berlin coverage.
+
+Best regards,
+The ThePostingCo Team" />
           
           <div className="grid md:grid-cols-2 gap-6">
             <div>
