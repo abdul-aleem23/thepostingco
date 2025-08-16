@@ -6,10 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/src/assets/index.css" rel="stylesheet">
     <title>The Posting Co.</title>
-    <script type="module" crossorigin src="/assets/index-At4Orkp4.js"></script>
+    <script type="module" crossorigin src="/assets/index-CsnDt9x-.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-CrM2d2yP.css">
   </head>
   <body>
+    <!-- Hidden form for Netlify detection -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="business-name" />
+      <input type="text" name="contact-name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <select name="business-type">
+        <option value="restaurant">Restaurant</option>
+        <option value="retail">Retail</option>
+        <option value="services">Services</option>
+        <option value="fitness">Fitness</option>
+        <option value="entertainment">Entertainment</option>
+        <option value="other">Other</option>
+      </select>
+      <input type="text" name="target-areas" />
+      <textarea name="notes"></textarea>
+    </form>
+    
     <div id="root"></div>
   </body>
 </html>
